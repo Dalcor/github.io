@@ -1,0 +1,17 @@
+@use "colors";
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: colors.$background-primary;
+}
+
+a {
+  text-decoration: none;
+  color: colors.$text-secondary;
+}

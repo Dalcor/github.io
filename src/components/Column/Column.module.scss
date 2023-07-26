@@ -1,0 +1,23 @@
+@use "src/styles/colors";
+
+.column {
+  border: 1px solid colors.$border-primary;
+}
+
+.title {
+  background-color: colors.$background-secondary;
+  font-size: 16px;
+  line-height: 28px;
+  height: 48px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  color: colors.$text-primary;
+  border-bottom: 1px solid colors.$border-primary;
+}
+
+.columnContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}

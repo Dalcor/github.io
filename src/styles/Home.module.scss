@@ -1,10 +1,29 @@
+@use "src/styles/colors";
+
 .tabs {
   display: flex;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 110px;
+  font-size: 68px;
+  font-weight: 600;
+  line-height: 80px;
+  color: colors.$text-primary;
+}
+
 .tab {
   width: 25%;
-  border: 1px solid #000;
+  border-top: 1px solid colors.$border-primary;
+  border-bottom: 1px solid colors.$border-primary;
+  padding-bottom: 20px;
+
+  &:not(:last-child) {
+    border-right: 1px solid colors.$border-primary;
+  }
 
   //transition-duration: 0.3s;
 
@@ -15,32 +34,28 @@
 
 .tabButton {
   width: 100%;
-  height: 60px;
-  font-size: 16px;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 36px;
+  color: colors.$text-primary;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
 }
 
 .resources {
-  padding: 30px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.events {
-  padding: 30px;
-}
-
-.eventsContainer {
-  display: grid;
   gap: 10px;
+  align-items: flex-start;
+  padding: 0 20px;
+
+  > div {
+    width: 33%;
+  }
 }
 
-.event {
-  border: 1px solid;
-  padding: 10px;
+.eventsTabContent {
+  padding: 0 20px;
 }
 
-.article {
-  border: 1px solid;
-  padding: 10px;
-}
