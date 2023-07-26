@@ -5,7 +5,8 @@ const nextConfig = {
   images: {
     loader: 'akamai',
     path: '',
-  }
+  },
+  assetPrefix: undefined,
 };
 
 export default nextConfig;
