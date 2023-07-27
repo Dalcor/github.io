@@ -5,7 +5,8 @@ interface Props {
   title: string,
   description: string,
   arrowDirection: "left" | "right",
-  isActive: boolean
+  isActive: boolean,
+  handleClick: () => void
 }
 
 export default function TabHeader({title, description, arrowDirection, isActive, handleClick}: Props) {
