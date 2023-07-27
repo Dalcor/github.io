@@ -8,8 +8,14 @@
   color: colors.$text-secondary;
   flex-shrink: 0;
 
-  &:hover .articleTitle {
-    text-decoration: underline;
+  //&:hover .articleTitle {
+  //  text-decoration: underline;
+  //}
+
+  transition-duration: 0.2s;
+
+  &:hover {
+    background-color: #323531;
   }
 
   &:not(:last-child) {

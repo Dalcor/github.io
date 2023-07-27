@@ -6,15 +6,26 @@
   gap: 10px;
   padding: 14px 20px;
 
+  //&:hover {
+  //  .title {
+  //    text-decoration: underline;
+  //  }
+  //
+  //  .arrow {
+  //    color: colors.$palette-green;
+  //    transform: rotate(-45deg);
+  //  }
+  //}
+
+  transition-duration: 0.2s;
+
   &:hover {
-    .title {
-      text-decoration: underline;
-    }
+    background-color: #323531;
 
     .arrow {
-      color: colors.$palette-green;
-      transform: rotate(-45deg);
-    }
+          color: colors.$palette-green;
+          transform: rotate(-45deg);
+        }
   }
 
   &:not(:last-child) {

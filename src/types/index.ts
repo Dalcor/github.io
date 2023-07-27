@@ -9,3 +9,5 @@ export type IRecentEvent = {
   url: string,
   date: string
 }
+
+export type IResourceTab = "articles" | "erc223" | "dev-sources";

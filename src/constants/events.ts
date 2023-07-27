@@ -22,6 +22,36 @@ export const events: IRecentEvent[] = [
     date: "10.08.2024"
   },
   {
+    title: "Lorem ipsum dolor sit amet, consectetur.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
+    title: "Lorem ipsum dolor sit amet, consectetur.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
+    title: "Lorem ipsum dolor sit.",
+    url: "#",
+    date: "10.08.2024"
+  },
+  {
     title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
     url: "#",
     date: "10.08.2024"

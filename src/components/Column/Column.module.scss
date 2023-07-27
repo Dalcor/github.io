@@ -2,22 +2,39 @@
 
 .column {
   border: 1px solid colors.$border-primary;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .title {
-  background-color: colors.$background-secondary;
+  font-weight: 600;
   font-size: 16px;
   line-height: 28px;
-  height: 48px;
-  padding: 0 16px;
   display: flex;
   align-items: center;
   color: colors.$text-primary;
+}
+
+.columnHeader {
+  padding: 16px 20px;
+  background-color: colors.$background-secondary;
   border-bottom: 1px solid colors.$border-primary;
+}
+
+.description {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 24px;
+  color: colors.$text-secondary;
 }
 
 .columnContent {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  flex: 1;
+  overflow-y: auto;
 }

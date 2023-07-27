@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function Article({url, title, description}: Props) {
-  return <a className={styles.link} href={url}>
+  return <a target="_blank" className={styles.link} href={url}>
       <span className={styles.articleTitle}>{title}</span>
       <span className={styles.description}>{description}</span>
     </a>
