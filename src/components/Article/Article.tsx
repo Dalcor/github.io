@@ -15,12 +15,9 @@ const defaultImage = 'default.png';
 
 export default function Article({url, title, description, animationDelay, image}: Props) {
   return <a target="_blank" className={styles.link} style={{animationDelay: `${animationDelay}s`}} href={url}>
-      <Image
+      <img
         src={`${basePath}/images/articles/${image || defaultImage}`}
         alt=''
-        layout="fill"
-        objectFit="cover"
-        objectPosition="center"
       />
       <div className={styles.backdrop} />
       <span className={styles.articleTitle}>{title}</span>
