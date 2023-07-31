@@ -192,7 +192,8 @@
 }
 
 .inactiveTabColumn {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   //border: 1px solid colors.$border-primary;
   overflow-y: auto;
   gap: 10px;
