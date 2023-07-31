@@ -48,7 +48,7 @@ export default function Home() {
       </Head>
       <header className={styles.header}>
         <img className={clsx(styles.bgImage, styles.leftImage)} src={`${basePath}/left-header-bg.png`} alt=""/>
-        <img className={clsx(styles.bgImage, styles.rightImage)} src="/right-header-bg.png" alt=""/>
+        <img className={clsx(styles.bgImage, styles.rightImage)} src={`${basePath}/right-header-bg.png`} alt=""/>
         <h1>ERC-223</h1>
         <p>Designed by security experts to protect user funds from accidental loss</p>
       </header>
@@ -132,7 +132,7 @@ export default function Home() {
       </main>
       <footer className={styles.footer}>
         <div className={styles.donation}>
-          <img src="/donat.png" alt=""/>
+          <img src={`${basePath}/donat.png`} alt=""/>
           <div className={styles.donationText}>
             <span className={styles.donationLabel}>This is a non-profit project, but donations appreciated:</span>
             <div className={styles.addressRow}>
