@@ -50,7 +50,7 @@ To add new Article, Dev Resource or ERC-223 Record:
 New card will appear in corresponding list.
 
 
-**Commit example**: [Add event]() (Not ready yet)
+**Commit example**: [Add event](https://github.com/Dalcor/github.io/commit/0c5d868ce7d5608a6fd9af664310bfcfac1514b6)
 
 <h3>Card Images</h3>
 
@@ -131,8 +131,6 @@ To add new Event Record:
 ````
 
 New card will appear in events list.
-
-**Commit example**: [Add event]() (Not ready yet)
 
 <h2>Deployment</h2>
 
