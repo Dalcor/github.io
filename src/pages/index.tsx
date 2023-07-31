@@ -11,7 +11,6 @@ import {devResources} from "../constants/dev-resources";
 import {erc223} from "../constants/erc-223";
 import TabHeader from "../components/TabHeader/TabHeader";
 import {IResourceTab} from "../types";
-import SimpleBar from "simplebar-react";
 import {basePath} from "../constants/build-config/isProd";
 
 const inactiveResourceTabs: Array<{
@@ -44,7 +43,7 @@ export default function Home() {
         <title>ERC-223</title>
         <meta name="description" content="ERC-223 articles, events and development sources aggregator" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        {/*<link rel="icon" href="favicon.ico" />*/}
+        <link rel="icon" href={`${basePath}/favicon.ico`} />
       </Head>
       <header className={styles.header}>
         <img className={clsx(styles.bgImage, styles.leftImage)} src={`${basePath}/left-header-bg.png`} alt=""/>
@@ -58,24 +57,24 @@ export default function Home() {
             <TabHeader
               isActive={activeTab === 0}
               arrowDirection="right"
-              title="Recources"
+              title="Resources"
               description={"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eveniet, repellat. Laboriosam praesentium quasi vel voluptatibus. Deleniti necessitatibus quidem sed!"}
               handleClick={() => setActiveTab(0)}
             />
             {activeTab === 0 && <div className={styles.resources}>
               <Column description={`ERC stands for "Ethereum Request for Comments"`} title="📝 Articles">
-                {articles.map(({url, title, description}, index) => {
-                  return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                {articles.map(({url, title, description, image}, index) => {
+                  return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                 })}
               </Column>
               <Column description="Useful resources regarding ERC-223" title="📔 ERC-223">
-                {erc223.map(({url, title, description}, index) => {
-                  return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                {erc223.map(({url, title, description, image}, index) => {
+                  return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                 })}
               </Column>
               <Column description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis earum neque voluptas voluptates!" title="👨🏻‍💻 Development resources">
-                {devResources.map(({url, title, description}, index) => {
-                  return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                {devResources.map(({url, title, description, image}, index) => {
+                  return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                 })}
               </Column>
             </div>}
@@ -89,23 +88,23 @@ export default function Home() {
                   })}
                 </div>
                 {activeResource === "articles" &&
-                  <div className={styles.inactiveTabColumn}>
-                    {articles.map(({url, title, description}, index) => {
-                      return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                  <div className={clsx(styles.inactiveTabColumn, "scrollbar")}>
+                    {articles.map(({url, title, description, image}, index) => {
+                      return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                     })}
                   </div>
                 }
                 {activeResource === "erc223" &&
-                <div className={styles.inactiveTabColumn}>
-                  {erc223.map(({url, title, description}, index) => {
-                    return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                <div className={clsx(styles.inactiveTabColumn, "scrollbar")}>
+                  {erc223.map(({url, title, description, image}, index) => {
+                    return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                   })}
                 </div>
                 }
                 {activeResource === "dev-sources" &&
-                <div className={styles.inactiveTabColumn}>
-                  {devResources.map(({url, title, description}, index) => {
-                    return <Article animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
+                <div className={clsx(styles.inactiveTabColumn, "scrollbar")}>
+                  {devResources.map(({url, title, description, image}, index) => {
+                    return <Article image={image} animationDelay={index * 0.2} key={title} url={url} title={title} description={description} />
                   })}
                 </div>
                 }

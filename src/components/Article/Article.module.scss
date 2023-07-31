@@ -15,14 +15,21 @@
   //}
 
   transition-duration: 0.2s;
+  position: relative;
 
-  animation: glow-title 5s ease-in-out infinite;
+
+  .img {
+    position: absolute;
+    pointer-events: none;
+  }
 
   &:hover {
     background-color: #323531;
     border-color: colors.$palette-green;
 
     .articleTitle {
+      animation-play-state: paused;
+      animation: none;
       text-shadow: 0 0 16px rgba(43, 231, 106, 0.80);
     }
   }
@@ -33,10 +40,22 @@
   }
 }
 
+.backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(26, 28, 25, 0.90);
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .description {
   font-size: 14px;
   line-height: 24px;
-
+  position: relative;
+  z-index: 2;
   @include media.for-large-desktop {
     font-size: 18px;
     line-height: 32px;
@@ -49,6 +68,9 @@
   font-weight: 600;
   line-height: 28px;
   transition-duration: 0.2s;
+  position: relative;
+  z-index: 2;
+  animation: glow-title 5s ease-in-out infinite;
 
   @include media.for-large-desktop {
     font-size: 20px;

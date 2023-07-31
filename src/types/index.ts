@@ -1,7 +1,8 @@
 export type IArticle = {
   title: string,
   url: string,
-  description: string
+  description: string,
+  image?: string
 }
 
 export type IRecentEvent = {
