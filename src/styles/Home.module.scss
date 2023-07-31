@@ -32,8 +32,27 @@
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: center;
+
+  & > div {
+    width: 33%;
+  }
+
+  .licence {
+    text-align: center;
+  }
+
+  a {
+    transition-duration: 0.2s;
+
+    &:hover {
+      color: colors.$palette-green;
+    }
+  }
+}
+
+.donationWrapper {
+  display: flex;
 }
 
 .header {
@@ -201,6 +220,20 @@
   border-radius: 100px;
   background-color: colors.$background-secondary;
   gap: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+
+  &:hover {
+    border-color: colors.$palette-green;
+    .donationAddress {
+      color: colors.$palette-green;
+    }
+    svg {
+      color: colors.$palette-green;
+    }
+  }
 }
 
 .donationLabel {
@@ -208,6 +241,7 @@
 }
 
 .donationAddress {
+  transition-duration: 0.2s;
   color: colors.$text-primary;
 }
 
@@ -222,16 +256,9 @@
   border: 0;
   width: 24px;
   height: 24px;
-  cursor: pointer;
 
   svg {
     color: colors.$text-secondary;
     transition-duration: 0.2s;
-  }
-
-  &:hover {
-    svg {
-      color: colors.$text-primary;
-    }
   }
 }
