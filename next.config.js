@@ -4,7 +4,7 @@ const isProd = process.env.NODE_ENV === 'production'
 
 const nextConfig = {
   reactStrictMode: true,
-  basePath: isProd ? '/erc223' : undefined
+  basePath: isProd ? '/github.io' : undefined
 }
 
 module.exports = nextConfig
