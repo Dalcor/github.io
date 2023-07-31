@@ -12,6 +12,7 @@ import {erc223} from "../constants/erc-223";
 import TabHeader from "../components/TabHeader/TabHeader";
 import {IResourceTab} from "../types";
 import SimpleBar from "simplebar-react";
+import {basePath} from "../constants/build-config/isProd";
 
 const inactiveResourceTabs: Array<{
   key: IResourceTab,
@@ -46,7 +47,7 @@ export default function Home() {
         {/*<link rel="icon" href="favicon.ico" />*/}
       </Head>
       <header className={styles.header}>
-        <img className={clsx(styles.bgImage, styles.leftImage)} src="/left-header-bg.png" alt=""/>
+        <img className={clsx(styles.bgImage, styles.leftImage)} src={`${basePath}/left-header-bg.png`} alt=""/>
         <img className={clsx(styles.bgImage, styles.rightImage)} src="/right-header-bg.png" alt=""/>
         <h1>ERC-223</h1>
         <p>Designed by security experts to protect user funds from accidental loss</p>
