@@ -1,6 +1,6 @@
 <h1 style="text-align: center">ERC 223 Info Aggregator</h1>
 
-##Get started
+<h2>Get started</h2>
 
 To run development server:
 
@@ -17,11 +17,11 @@ npm run dev
 
 App will be available on the [localhost:3000](localhost:3000)
 
-##Working with data
+<h2>Working with data</h2>
 
 All records on web page is stored in json files in **src/constants**
 
-###New Article
+<h3>New Article</h3>
 
 To add new Article, Dev Resource or ERC-223 Record:
 
@@ -52,7 +52,7 @@ New card will appear in corresponding list.
 
 **Commit example**: [Add event]() (Not ready yet)
 
-###Card Images
+<h3>Card Images</h3>
 
 To add background image for Article, Dev Resource or ERC-223 card:
 
@@ -97,14 +97,14 @@ or
 $image-overlay-opacity: 0.7; // the image will darken less
 ````
 
-###Default image
+<h3>Default image</h3>
 
 If no image provided for article, the default image will be applied to card. 
 
 If you want to change the default image for card, replace **default.png** 
 image in following folder *public/images/articles/default.png*
 
-##New event
+<h2>New event</h2>
 
 To add new Event Record:
 
@@ -134,7 +134,7 @@ New card will appear in events list.
 
 **Commit example**: [Add event]() (Not ready yet)
 
-##Deployment
+<h2>Deployment</h2>
 
 To deploy changes simply push changes to master branch. Any push to master branch
 will trigger github action, that will build app and push it to *public* branch. 
@@ -153,5 +153,4 @@ If there are any problems with deployment, check following repository settings:
 
     - Check that "Allow Github Actions to create and approve pull requests" checkbox is enabled 
     
-  
 If settings are okay but there are still some issues with deployment, please contact developer to investigate the issue.
