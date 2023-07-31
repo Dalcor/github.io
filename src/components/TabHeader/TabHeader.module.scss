@@ -1,5 +1,6 @@
 @use "src/styles/colors";
 @use "src/styles/media";
+@import "src/styles/keyframes";
 
 .tabHeader {
   padding: 20px;
@@ -52,6 +53,11 @@
   position: relative;
   transition-duration: 0.2s;
 
+  svg {
+    position: relative;
+    z-index: 1;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -66,9 +72,7 @@
   }
 
   &.left {
-    svg {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
   }
 
   &:hover {
@@ -80,4 +84,10 @@
     color: #5F625F;
     pointer-events: none;
   }
+}
+
+.arrowGlow {
+  position: absolute;
+  animation: glow-arrow 4s ease-in-out infinite alternate;
+  transform: rotate(180deg);
 }

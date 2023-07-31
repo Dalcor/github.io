@@ -27,7 +27,6 @@
 .columnHeader {
   padding: 16px 20px;
   background-color: colors.$background-secondary;
-  border-bottom: 1px solid colors.$border-primary;
   margin-bottom: 10px;
 
   @include media.for-large-desktop {

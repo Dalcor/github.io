@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Article.module.scss";
-import Image from "next/image";
 import {basePath} from "../../constants/build-config/isProd";
 
 interface Props {

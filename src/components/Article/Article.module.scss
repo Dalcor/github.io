@@ -2,6 +2,8 @@
 @use "src/styles/media";
 @import "src/styles/keyframes";
 
+$image-overlay-opacity: 0.9;
+
 .link {
   display: flex;
   flex-direction: column;
@@ -40,6 +42,10 @@
       animation: none;
       text-shadow: 0 0 16px rgba(43, 231, 106, 0.80);
     }
+
+    .backdrop {
+      background-color: #323531;
+    }
   }
 
   @include media.for-large-desktop {
@@ -49,11 +55,12 @@
 }
 
 .backdrop {
+  transition-duration: 0.2s;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(26, 28, 25, 0.90);
+  background-color: rgba(26, 28, 25, $image-overlay-opacity);
   top: 0;
   left: 0;
   pointer-events: none;

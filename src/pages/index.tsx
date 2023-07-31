@@ -12,6 +12,7 @@ import {erc223} from "../constants/erc-223";
 import TabHeader from "../components/TabHeader/TabHeader";
 import {IResourceTab} from "../types";
 import {basePath} from "../constants/build-config/isProd";
+import {useSnackbar} from "../providers/SnackbarProvider";
 
 const inactiveResourceTabs: Array<{
   key: IResourceTab,
@@ -37,6 +38,7 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState(0);
   const [activeResource, setActiveResource] = useState<IResourceTab>("articles");
 
+  const {showMessage} = useSnackbar();
   return (
     <div className={styles.page}>
       <Head>
@@ -133,6 +135,7 @@ export default function Home() {
         <div className={styles.donationWrapper}>
           <div onClick={async () => {
             await navigator.clipboard.writeText(addressForDonation);
+            showMessage("Wallet address copied");
             console.log("Copied!");
           }} role="button" className={styles.donation}>
             <img src={`${basePath}/donat.png`} alt=""/>
