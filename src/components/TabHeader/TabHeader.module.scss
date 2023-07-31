@@ -1,8 +1,13 @@
 @use "src/styles/colors";
+@use "src/styles/media";
 
 .tabHeader {
   padding: 20px;
   flex: 0 0 auto;
+
+  @include media.for-large-desktop {
+    padding: 30px;
+  }
 }
 
 .tabTitle {
@@ -14,12 +19,23 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
+
+  @include media.for-large-desktop {
+    font-size: 38px;
+    line-height: 56px;
+  }
+
 }
 
 .tabDescription {
   font-size: 14px;
   line-height: 24px;
   color: colors.$text-secondary;
+
+  @include media.for-large-desktop {
+    font-size: 18px;
+    line-height: 32px;
+  }
 }
 
 .arrowButton {

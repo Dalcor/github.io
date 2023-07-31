@@ -1,4 +1,6 @@
 @use "src/styles/colors";
+@use "src/styles/media";
+@import "src/styles/keyframes";
 
 .tabs {
   display: flex;
@@ -24,13 +26,13 @@
 .footer {
   font-size: 16px;
   line-height: 28px;
-  height: 60px; /* Replace with your desired footer height */
+  height: 118px;
   background-color: colors.$background-primary;
   border-top: colors.$border-primary;
   padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -42,12 +44,15 @@
   padding: 24px 0 32px;
   gap: 12px;
   flex: 0 0 auto;
+  position: relative;
 
   h1 {
     font-size: 38px;
     font-weight: 600;
     line-height: 56px;
     color: colors.$text-primary;
+
+    animation: glow-main 5s infinite ease-in-out;
   }
 
   p {
@@ -55,10 +60,23 @@
     font-size: 16px;
     line-height: 28px;
   }
+
+  @include media.for-large-desktop {
+    gap: 8px;
+
+    h1 {
+      font-size: 68px;
+      line-height: 80px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
 }
 
 .tab {
-  //width: 33.3%;
   border-top: 1px solid colors.$border-primary;
   border-bottom: 1px solid colors.$border-primary;
   padding-bottom: 20px;
@@ -71,8 +89,6 @@
   &:not(:last-child) {
     border-right: 1px solid colors.$border-primary;
   }
-
-  //transition-duration: 0.3s;
 
   &.active {
     flex: 0.664;
@@ -90,6 +106,11 @@
   > div {
     width: 33%;
   }
+
+  @include media.for-large-desktop {
+    padding: 0 30px;
+    gap: 30px;
+  }
 }
 
 .eventsTabContent {
@@ -97,6 +118,20 @@
 
   flex: 1;
   overflow-y: auto;
+}
+
+.bgImage {
+  animation: glow-header-bg 5s infinite ease-in-out;
+  position: absolute;
+  height: 100%;
+}
+
+.leftImage {
+  left: 0;
+}
+
+.rightImage {
+  right: 0;
 }
 
 .resourceTabs {
@@ -143,4 +178,60 @@
   margin: 0 20px;
   border: 1px solid colors.$border-primary;
   overflow-y: auto;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.addressRow {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.donation {
+  display: flex;
+  align-items: center;
+  padding: 10px 32px 10px 20px;
+  border-radius: 100px;
+  background-color: colors.$background-secondary;
+  gap: 8px;
+}
+
+.donationLabel {
+  color: colors.$text-secondary;
+}
+
+.donationAddress {
+  color: colors.$text-primary;
+}
+
+.donationText {
+  display: grid;
+  gap: 4px;
+}
+
+.copyAddressForDonationsButton {
+  background: transparent;
+  padding: 0;
+  border: 0;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+
+  svg {
+    color: colors.$text-secondary;
+    transition-duration: 0.2s;
+  }
+
+  &:hover {
+    svg {
+      color: colors.$text-primary;
+    }
+  }
 }
